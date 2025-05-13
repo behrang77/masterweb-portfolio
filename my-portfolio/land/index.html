@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MasterWeb | Portfolio</title>
+    <link rel="stylesheet" href="/main.css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="container">
+          <h1 class="logo">MasterWeb</h1>
+          <button class="menu-toggle" aria-label="menu-toggle">☰</button>
+          <nav class="nav-bar">
+            <ul>
+              <li>
+                <i class="fa-solid fa-house"></i>
+                <a href="/land/index.html">Home</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-address-card"></i>
+                <a href="/land/about.html">about</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <a href="/land/projects.html">Projects</a>
+              </li>
+              <li><a href="/land/webservices.html">Web services</a></li>
+              <li><a href="/land/contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <section class="hero">
+        <h2>Welcome to MasterWeb</h2>
+        <p>
+          Turning ideas into modern, responsive websites using HTML, CSS &
+          JavaScript. I'm growing fast toward full-stack with React and Django.
+          Ready to help you build something amazing.
+        </p>
+      </section>
+    </div>
+
+    <footer>
+      <div class="socials">
+        <a href=" #Linkedin ">Linkedin</a
+        ><i class="fa-brands fa-linkedin"></i> | <a href=" #Github ">Github</a
+        ><i class="fa-brands fa-github"></i> |
+        <a href="tel:+989936193006 ">Telephone</a
+        ><i class="fa-solid fa-phone"></i> |
+        <a href="mailto:masterwebsite77@gmail.com ">Gmail</a>
+        <i class="fa-solid fa-inbox"></i>|
+        <a href="https://api.whatsapp.com/send?phone=989936193006">whats app</a
+        ><i class="fa-brands fa-whatsapp"></i>
+      </div>
+      &copy; 2025 MasterWeb. All rights reserved.
+    </footer>
+    <script>
+      document.querySelectorAll('a[href^="#about"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+    <script>
+      document.querySelectorAll('a[href^="#about"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+    <script>
+      document.querySelectorAll('a[href^="#projects"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+    <script>
+      document.querySelectorAll('a[href^="#webservices"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+    <script>
+      document.querySelectorAll('a[href^="#contact"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>

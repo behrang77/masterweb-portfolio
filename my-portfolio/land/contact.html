@@ -1,0 +1,108 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/main.css/contact.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("LCfNvOrn5ZRLArF7e"); 
+  })();
+</script>
+
+    <title>contact page</title>
+  </head>
+  <body>
+
+    <div class="wrapper">
+      <header>
+         <div class="container">
+          <h1 class="logo">MasterWeb</h1>
+          <button class="menu-toggle" aria-label="menu-toggle">☰</button>
+          <nav class="nav-bar">
+            <ul>
+            <li>
+              <i class="fa-solid fa-house"></i>
+              <a href="/land/index.html">Home</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-address-card"></i>
+              <a href="/land/about.html">about</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+              <a href="/land/projects.html">Projects</a>
+            </li>
+            <li><a href="/land/webservices.html">Web services</a></li>
+            <li><a href="/land/contact.html">Contact</a></li>
+          </ul>
+          </nav>
+        </div>
+      </header>
+
+      <section id="contact" class="contact">
+        <h2>Submit Your Project</h2>
+        <form id="contact-form">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" required>
+      
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required>
+      
+          <label for="type">Project Type:</label>
+          <select id="type" name="type" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="website">Website</option>
+            <option value="webapp">Web App</option>
+            <option value="uiux">UI/UX Design</option>
+            <option value="other">Other</option>
+          </select>
+      
+          <label for="budget">Estimated Budget (Optional):</label>
+          <input type="text" id="budget" name="budget" placeholder="e.g. €500 - €1000">
+      
+          <label for="message">Project Description:</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+      
+          <button type="submit">Send Project Request</button>
+        </form>
+      </section>
+      
+
+    <footer>
+      <div class="socials">
+        <a href=" #Linkedin ">Linkedin</a
+          ><i class="fa-brands fa-linkedin"></i> | <a href=" #Github ">Github</a
+          ><i class="fa-brands fa-github"></i> |
+          <a href="tel:+989936193006 ">Telephone</a
+          ><i class="fa-solid fa-phone"></i> |
+          <a href="mailto:masterwebsite77@gmail.com ">Gmail</a>
+          <i class="fa-solid fa-inbox"></i>|
+          <a href="https://api.whatsapp.com/send?phone=989936193006">whats app</a
+          ><i class="fa-brands fa-whatsapp"></i>
+      </div>
+      &copy; 2025 MasterWeb. All rights reserved.
+    </footer>
+    <script>
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+    
+        emailjs.sendForm("service_website", 'template_mqw66hj', this)
+          .then(function(response) {
+            alert('Project request sent successfully!');
+          }, function(error) {
+            alert('Failed to send the request. Please try again later.');
+            console.error(error);
+          });
+    
+        this.reset(); 
+      });
+    </script>
+    
+    <script src="/js/script.js"></script>
+  </body>
+</html>
