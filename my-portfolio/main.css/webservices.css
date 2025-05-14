@@ -4,8 +4,10 @@
   font-family: "Roboto", sans-serif;
 }
 body {
-  background: #111;
-  color: #fff;
+  background-image: url("/main.css/photos/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 header {

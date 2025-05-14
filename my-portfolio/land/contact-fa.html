@@ -1,15 +1,10 @@
-<html lang="en">
+<html lang="fa">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="contact" content="Contact MasterWeb for website design and development projects.">
-    <link rel="stylesheet" href="/main.css/contact.css" />
-
-
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta name="ارتباط با من"content=" ارتباط با من برای سفارش و مشاوره ی پروژه">
+    <link rel="stylesheet" href="/main.css/contact-fa.css" />
+  <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
   (function(){
@@ -17,76 +12,78 @@
   })();
 </script>
 
-    <title>contact</title>
+    <title>ارتباط با من</title>
   </head>
   <body>
+
     <div class="wrapper">
       <header>
          <div class="container">
-          <h1 class="logo">MasterWeb</h1>
+          <h1 class="logo">مستر وب</h1>
           <button class="menu-toggle" aria-label="menu-toggle">☰</button>
           <nav class="nav-bar">
             <ul>
             <li>
               <i class="fa-solid fa-house"></i>
-              <a href="/land/index.html">Home</a>
+              <a href="/land/index-fa.html">خانه</a>
             </li>
             <li>
               <i class="fa-solid fa-address-card"></i>
-              <a href="/land/about.html">about</a>
-            </li> 
+              <a href="/land/about-fa.html">درباره ی من</a>
+            </li>
             <li>
               <i class="fa-solid fa-screwdriver-wrench"></i>
-              <a href="/land/projects.html">Projects</a>
+              <a href="/land/projects-fa.html">پروژه ها</a>
             </li>
-            <li><a href="/land/webservices.html">Web services</a></li>
-            <li><a href="/land/contact.html">Contact</a></li>
+            <li><a href="/land/webservices-fa.html">سرویس ها</a></li>
+            <li><a href="/land/contact-fa.html">ارتباط با من</a></li>
           </ul>
           </nav>
         </div>
       </header>
 
       <section id="contact" class="contact">
-        <h2>Submit Your Project</h2>
+        <h2>ثبت پروژه ی شما</h2>
         <form id="contact-form">
-          <label for="name">Full Name:</label>
+          <label for="name">نام کامل:</label>
           <input type="text" id="name" name="name" required>
       
-          <label for="email">Email Address:</label>
+          <label for="email">آدرس ایمیل:</label>
           <input type="email" id="email" name="email" required>
       
-          <label for="type">Project Type:</label>
+          <label for="type">مدل پروژه:</label>
           <select id="type" name="type" required>
-            <option value="" disabled selected>Select one</option>
-            <option value="website">Website</option>
-            <option value="webapp">Web App</option>
-            <option value="uiux">UI/UX Design</option>
-            <option value="other">Other</option>
+            <option value="" disabled selected>یک مورد را انتخاب کنید</option>
+            <option value="website">سایت</option>
+            <option value="webapp">وب اپ</option>
+            <option value="uiux">UI/UX طراحی</option>
+            <option value="other">غیره</option>
           </select>
       
-          <label for="budget">Estimated Budget (Optional):</label>
+          <label for="budget">اعلام قیمت (اختیاری):</label>
           <input type="text" id="budget" name="budget" placeholder="e.g. €500 - €1000">
       
-          <label for="message">Project Description:</label>
+          <label for="message">توضیح پروژه:</label>
           <textarea id="message" name="message" rows="6" required></textarea>
       
-          <button type="submit">Send Project Request</button>
+          <button type="submit">ارسال درخواست پروژه</button>
         </form>
       </section>
+      
 
     <footer>
       <div class="socials">
-        <a href=" #Linkedin ">Linkedin</a
-          ><i class="fa-brands fa-linkedin"></i> | <a href=" #Github ">Github</a
+        <a href=" #Linkedin ">لینکدین</a
+          ><i class="fa-brands fa-linkedin"></i> | <a href=" #Github ">گیت‌هاب</a
           ><i class="fa-brands fa-github"></i> |
-          <a href="tel:+989936193006 ">Telephone</a
+          <a href="tel:+989936193006 ">تلفن</a
           ><i class="fa-solid fa-phone"></i> |
-          <a href="mailto:masterwebsite77@gmail.com ">Gmail</a>
+          <a href="mailto:masterwebsite77@gmail.com ">ایمیل</a>
           <i class="fa-solid fa-inbox"></i>|
-          <a href="https://api.whatsapp.com/send?phone=989936193006">whats app</a
+          <a href="https://api.whatsapp.com/send?phone=989936193006">واتساپ</a
           ><i class="fa-brands fa-whatsapp"></i>
       </div>
-      &copy; 2025 MasterWeb. All rights reserved.
+      &copy; تمام حقوق محفوظ است برای مستر وب –۲۰۲۵
     </footer>
     <script>
       document.getElementById('contact-form').addEventListener('submit', function(event) {

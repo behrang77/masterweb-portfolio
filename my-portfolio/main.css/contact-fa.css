@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 body {
@@ -9,6 +9,9 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  direction: rtl;
+  font-family: "Vazir", sans-serif;
+  text-align: right;
 }
 
 header {
@@ -50,18 +53,15 @@ header h1 {
 }
 
 .menu-toggle {
-  display: none;
-  border-radius: 10px;
-  transition: all 0.5s ease;
+  display: block;
   background-color: #256d8a;
-  color: #111;
-  transform: scale(1.2) translate(5px);
   width: 2rem;
   height: 2rem;
   text-align: center;
   border-radius: 10px;
   font-size: 1.4rem;
   cursor: pointer;
+  color: #58a6ff;
   position: absolute;
   top: 1.5rem;
   right: 1.6rem;
@@ -73,10 +73,10 @@ header h1 {
   border-radius: 10px;
   top: 15px;
   right: 10px;
-  background-color: #161b22;
-  color: #000;
   padding: 15px;
   text-align: center;
+  background-color: #58a6ff;
+  color: #0d1117;
   transition: all 0.3s ease;
 }
 
@@ -86,61 +86,104 @@ header h1 {
   border-radius: 10px;
   padding: 10px;
   gap: 1rem;
-  background-color: #256d8a;
-  color: #111;
+  background-color: #161b22;
+  color: aliceblue;
 }
 
 .nav-bar ul li a {
   display: inline-block;
+  color: #ffffff;
   text-decoration: none;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 1.4rem;
-  color: #111;
   margin-left: 10px;
   padding: 8px 12px;
-  border-radius: 6px;
+  border-radius: 10px;
   transition: all 0.5s ease;
 }
 
-.nav-bar ul li :hover {
-  background-color: #161b22;
-  color: #58a6ff;
-  border-radius: 10px;
-  transition: all 0.5s ease;
+.nav-bar ul li a:hover {
+  background-color: #256d8a;
+  color: #161b22;
   transform: scale(1.2) translate(5px);
 }
 
-.about h2 {
+h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 100px;
-  margin: 1rem;
-  padding: 1.2rem;
-  color: aqua;
-  font-size: 2.6rem;
   text-align: center;
-  padding: 0.5rem;
+  margin: 1.5rem;
+  background-color: #2860a088;
+  color: aqua;
   width: 150px;
   height: 150px;
+  border-radius: 90px;
 }
 
-.about p {
-  margin-bottom: 1.2rem;
-  margin-right: 1.3rem;
-  margin-left: 1.3rem;
-  padding: 15px;
-  font-size: 1.4rem;
-  color: #0d1117;
+.contact {
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: #e2e2e2;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+  text-align: center;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.contact input,
+.contact select,
+.contact textarea {
+  margin-bottom: 1.5rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border 0.3s;
+}
+
+.contact input:focus,
+.contact select:focus,
+.contact textarea:focus {
+  outline: none;
+  border-color: #0077cc;
+}
+
+.contact button {
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact button:hover {
+  background-color: #005fa3;
 }
 
 footer {
   background-color: #161b22;
   text-align: center;
   padding: 20px;
-  margin-top: 1rem;
   font-size: 0.9rem;
-  color: hsl(0, 0%, 100%);
+  color: #e2e2e2;
 }
 
 footer .socials a {
@@ -157,24 +200,17 @@ footer .socials a:hover {
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    z-index: 1001;
   }
 
   .nav-bar {
     display: none;
     position: absolute;
-    top: 15px; /* فاصله از بالا (بسته به ارتفاع دکمه همبرگر) */
-    right: 53px;
-    background-color: #0d1117;
+    top: 60px;
+    right: 15px;
+    background-color: #fff;
     border-radius: 10px;
-    padding: 0.5rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 180px;
     z-index: 1000;
-    width: 160px;
-    transition: all 0.3s ease-in-out;
   }
 
   .nav-bar.active {
@@ -182,55 +218,52 @@ footer .socials a:hover {
   }
 
   .nav-bar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
     flex-direction: column;
+    padding: 0.5rem;
   }
 
   .nav-bar ul li {
-    padding: 0.75rem 1rem;
-    border-radius: 8px;
-    color: white;
-    cursor: pointer;
+    padding: 0.5rem 1rem;
   }
 
   .nav-bar ul li:hover {
     background-color: #256d8a;
-    transform: scale(1.05);
+    color: white;
+    border-radius: 8px;
+    transform: translateX(5px);
     transition: all 0.3s ease;
+  }
+
+  .contact {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .contact h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact input,
+  .contact select,
+  .contact textarea {
+    font-size: 0.95rem;
+  }
+
+  .contact button {
+    font-size: 1rem;
   }
 }
 
-h2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 100px;
-  margin-left: 20px;
-  margin-top: 15px;
-  padding: 1rem;
-  background-color: #2860a088;
-  color: aqua;
-  font-size: 3.5rem;
+footer {
+  background-color: #161b22;
   text-align: center;
-  padding: 0.5rem;
-  width: 180px;
-  height: 180px;
+  padding: 25px;
+  margin-top: 100px;
+  font-size: 0.9rem;
+  color: #e2e2e2;
 }
-
-p {
+.wrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 40px;
-  margin-left: 35px;
-  border-radius: 10px;
-  font-family: inter;
-  font-size: 1rem;
-  width: 76%;
-  height: 210px;
-  background-color: #79c0ff;
-  color: black;
+  flex-direction: column;
+  min-height: 100vh;
 }
